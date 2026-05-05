@@ -17,6 +17,10 @@
     {
       "key": "taskId",
       "value": ""
+    },
+    {
+      "key": "userId",
+      "value": ""
     }
   ],
   "item": [
@@ -260,6 +264,34 @@
                 "api",
                 "tasks",
                 "{{taskId}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get User By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/users/{{userId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "{{userId}}"
               ]
             }
           }
